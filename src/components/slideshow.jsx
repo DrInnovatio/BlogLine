@@ -11,17 +11,28 @@ const spanStyle = {
 }
 
 const divStyle = {
-  width: '50rem',
-  height: '50rem',
-  display: 'column',
+  width: '40rem',
+  height: '40rem',
+  display: 'flex',
   flex:1,
   justifContent: 'center',
   alignItems: 'center',
   overflow: 'hidden',
-  objectFit: 'cover',
+  objectFit: 'contain',
   position: 'relative',
-  
+  marginLeft: '16rem',
+  objectPosition: '80% 100%'
 }
+
+// const image = {
+//   maxWidth: '100%',
+//   maxHeight: '100%',
+//   objectFit: 'contain',
+//   //objectPosition: '100% 100%',
+//   margin: 'auto',
+//   display: 'block',
+//   backgroundSize: 'cover'
+// }
 
 const slideImages = [
   {
@@ -44,7 +55,7 @@ function Slideshow() {
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div key={index}>
-              <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+             <div style={ {...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
                 <span style={spanStyle}>{slideImage.caption}</span>
               </div>
             </div>

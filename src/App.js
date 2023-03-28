@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Slide } from 'react-slideshow-image';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import logo from '../src/images/logo.png';
@@ -7,6 +6,9 @@ import logo from '../src/images/logo.png';
 import 'react-slideshow-image/dist/styles.css'
 
 import Slideshow from './components/slideshow';
+import Button from '@mui/material/Button';
+import SimpleAccordion from '../src/components/accordion';
+import CheckboxLabels from '../src/components/checkbox';
 
 
 // import slide_1 from '../src/images/slide_1.jpg'
@@ -69,30 +71,38 @@ function App() {
       <TextField id="outlined-basic" label="매장 상호명" variant="outlined" />
       <TextField id="outlined-basic" label="매장 주소" variant="outlined" />
       <TextField id="outlined-basic" label="인기매뉴" variant="outlined" />
-      <TextField id="outlined-basic" label="인기매뉴 가격" variant="outlined" />
-      
-      </Box>
-      <Box
+          <TextField id="outlined-basic" label="인기매뉴 가격" variant="outlined" />
+          <Box
         component="form"
         sx={{
-          '& .MuiTextField-root': { m: 4, width: '55ch', marginTop: '6rem' },
+          '& .MuiTextField-root': { m: 20.5, width: '55ch', marginTop: '1rem' },
         }}
         noValidate
         autoComplete="off"
-      >
-      <div>
-       
-      <TextField
+        >
+           <TextField
           id="outlined-multiline-static"
           label="간단한 매장 소개"
           multiline              
           rows={4}
           defaultValue=""
       />
+            <div>
+          <SimpleAccordion/>
+       <CheckboxLabels/>
+      <Button variant="contained">Contained</Button>
         </div>
     </Box>
+      
+      </Box>
+      
       </div>
+      
+     
+      
+  
     </div>
+    
   );
 }
 
