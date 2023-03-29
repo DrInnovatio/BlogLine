@@ -11,8 +11,8 @@ const spanStyle = {
 }
 
 const divStyle = {
-  width: '40rem',
-  height: '40rem',
+  width: '35rem',
+  height: '35rem',
   display: 'flex',
   flex:1,
   justifContent: 'center',
@@ -20,19 +20,9 @@ const divStyle = {
   overflow: 'hidden',
   objectFit: 'contain',
   position: 'relative',
-  marginLeft: '16rem',
-  objectPosition: '80% 100%'
+  
 }
 
-// const image = {
-//   maxWidth: '100%',
-//   maxHeight: '100%',
-//   objectFit: 'contain',
-//   //objectPosition: '100% 100%',
-//   margin: 'auto',
-//   display: 'block',
-//   backgroundSize: 'cover'
-// }
 
 const slideImages = [
   {
@@ -51,7 +41,7 @@ const slideImages = [
 
 function Slideshow() {
   return (
-    <div className="slide-container">
+    <div className="slide-container" style={{width: '50rem'}}>
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div key={index}>

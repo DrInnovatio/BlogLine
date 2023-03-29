@@ -11,13 +11,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function SimpleAccordion() {
 
- 
-
   return (
-    <div>
+    <div style={ { width: '55rem' } }>
       <Accordion>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={ <ExpandMoreIcon /> }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
