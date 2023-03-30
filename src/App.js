@@ -6,6 +6,7 @@ import SimpleAccordion from '../src/components/accordion';
 import CheckboxLabels from '../src/components/checkbox';
 import BasicTextFields from '../src/components/form';
 import SubmitButton from '../src/components/button';
+import Footer from './components/footer';
 import 'react-slideshow-image/dist/styles.css'
 import './App.css'; 
 
@@ -30,8 +31,6 @@ const styles = {
     width: '50%',
     backgroundColor: 'yellow'
   },
-  
-
 };
 
 function App() {
@@ -62,9 +61,10 @@ function App() {
           <CheckboxLabels/>
           <SubmitButton/>
       
-     
+       <Footer/>
       
       </div>
+   
       </div>
     
   );
