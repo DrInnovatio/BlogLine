@@ -1,6 +1,15 @@
 import * as React from 'react';
 import { Slide } from 'react-slideshow-image';
-import ad_1 from '../images/ad_1.jpeg';
+import pic_1 from '../images/001.jpg'
+import pic_2 from '../images/002.jpg'
+import pic_3 from '../images/003.jpg'
+import pic_4 from '../images/004.jpg'
+import pic_5 from '../images/005.jpg'
+import pic_6 from '../images/006.jpg'
+import pic_7 from '../images/007.jpg'
+import pic_8 from '../images/008.jpg'
+import pic_9 from '../images/009.jpg'
+import pic_10 from '../images/010.jpg'
 import 'react-slideshow-image/dist/styles.css';
 
 
@@ -26,17 +35,48 @@ const divStyle = {
 
 const slideImages = [
   {
-    url: `${ad_1}`,
+    url: `${pic_1}`,
     caption: 'Slide 1'
   },
   {
-    url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-    caption: 'Slide 2'
+    url: `${pic_2}`,
+    caption: 'Slide 1'
   },
   {
-    url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-    caption: 'Slide 3'
+    url: `${pic_3}`,
+    caption: 'Slide 1'
   },
+  {
+    url: `${pic_4}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_5}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_6}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_7}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_8}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_9}`,
+    caption: 'Slide 1'
+  },
+  {
+    url: `${pic_10}`,
+    caption: 'Slide 1'
+  },
+  
+
+  
 ];
 
 function Slideshow() {
