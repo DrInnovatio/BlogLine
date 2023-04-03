@@ -1,11 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import logo from '../src/images/logo.png';
+import Logo from './components/logo';
 import Slideshow from './components/slideshow';
-import SimpleAccordion from '../src/components/accordion';
-import CheckboxLabels from '../src/components/checkbox';
+
 import BasicTextFields from '../src/components/form';
-import SubmitButton from '../src/components/button';
 import Footer from './components/footer';
 import 'react-slideshow-image/dist/styles.css'
 import './App.css'; 
@@ -40,10 +38,8 @@ function App() {
         <section>
           <Slideshow/>
         </section>
-        <section className="one-fourth" style={styles.a}>
-          <img src={logo} />
-        </section>
         
+      
         <Box
           component="form"
           sx={{
@@ -56,10 +52,10 @@ function App() {
         >
 
             <BasicTextFields />
+          
         </Box>
-          <SimpleAccordion/>
-          <CheckboxLabels/>
-          <SubmitButton/>
+       
+ 
       
        <Footer/>
       
