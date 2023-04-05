@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Logo from './components/logo';
+//import Logo from './components/logo';
 import Slideshow from './components/slideshow';
-
 import BasicTextFields from '../src/components/form';
 import Footer from './components/footer';
+import KmongImages from './components/kmong';
 import 'react-slideshow-image/dist/styles.css'
 import './App.css'; 
 
@@ -17,29 +17,28 @@ const styles = {
     width: '70%',
     height: 'auto',
     alignText: 'center',
-    backgroundColor: 'green',
-    margin: '3rem auto'
+    margin: '2rem auto',
+    backgroundColor:'green'
   },
   // inputs: {
 
   inputText: {
-      padding: "10px"
+      padding: "1rem"
   },
-  a: {
-    width: '50%',
-    backgroundColor: 'yellow'
-  },
+  
 };
 
 function App() {
   return (
     <div className="App" style={styles.main}>
-      <div>
+
         <section>
-          <Slideshow/>
+            <Slideshow/>
         </section>
         
-      
+        <section>
+            <KmongImages/>
+        </section>
         <Box
           component="form"
           sx={{
@@ -54,13 +53,9 @@ function App() {
             <BasicTextFields />
           
         </Box>
-       
- 
-      
-       <Footer/>
-      
-      </div>
+    
    
+       <Footer/>
       </div>
     
   );

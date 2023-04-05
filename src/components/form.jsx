@@ -26,10 +26,13 @@ const styles = {
     borderRadius: '25px',
     boxShadow: 'inset 13px 13px 26px #d0d0d0, inset -13px -13px 26px #f0f0f0'
   },
-  a: {
-    background: 'linearradient(145deg, #c3c2d6, #e8e7ff)',
-    boxShadow: '19px 19px 32px #c3c2d6, -19px -19px 32px #efeeff'
+  radioButtonForm: {
+    display: 'inlineblock'
   }
+  // a: {
+  //   background: 'linearradient(145deg, #c3c2d6, #e8e7ff)',
+  //   boxShadow: '19px 19px 32px #c3c2d6, -19px -19px 32px #efeeff'
+  // }
 };
 
 
@@ -127,7 +130,7 @@ export default function BasicTextFields() {
         {/* Basic form */}
 
         {/* Experience of online Ads - Radio box*/}
-        <FormControl >
+        <FormControl styles={styles.radioButtonForm}>
           <FormLabel id="demo-row-radio-buttons-group-label">나는 온라인 광고를 해본 경험이 ..</FormLabel>
           <RadioGroup
             row
