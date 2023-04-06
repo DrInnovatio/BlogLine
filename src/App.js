@@ -14,7 +14,7 @@ import './App.css';
 
 const styles = {
   main: {
-    width: '70%',
+    width: '75%',
     height: 'auto',
     alignText: 'center',
     margin: '2rem auto',
