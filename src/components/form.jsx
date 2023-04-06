@@ -17,18 +17,32 @@ import { db } from '../firebase';
 const styles = {
   inputs: {
     flex: 1,
-    width: '55rem',
+    width: '50rem',
     height: '60rem',
     flexDirection: 'column',
     justifyContent: 'space-between', //space-around
-    margin: '2rem auto',
+    marginTop: '2rem',
+    marginLeft:  '1rem',
     paddingTop: '2rem',
     borderRadius: '25px',
     boxShadow: 'inset 13px 13px 26px #d0d0d0, inset -13px -13px 26px #f0f0f0'
   },
   radioButtonForm: {
-    display: 'inlineblock'
-  }
+    flexDirection: 'row',
+    marginRight: '5rem',
+    textAlign: 'center',
+    marginLeft:  '12rem',
+    paddingTop: '2rem',
+  },
+  submitButton: {
+    width: '15rem',
+    marginTop: '3rem',
+    marginLeft: '20rem' 
+  },
+  checkBox: {
+    marginLeft: '16rem' 
+  },
+    
   // a: {
   //   background: 'linearradient(145deg, #c3c2d6, #e8e7ff)',
   //   boxShadow: '19px 19px 32px #c3c2d6, -19px -19px 32px #efeeff'
@@ -60,7 +74,6 @@ export default function BasicTextFields() {
   const handleIsAgreedChange = (event) => {
     setIsAgreed(event.target.checked);
   };
-
 
   const handleAnswerChange = (event) => {
     setIsExperienced(event.target.value);
@@ -108,8 +121,6 @@ export default function BasicTextFields() {
         autoComplete="off"
         style={styles.inputs}
       >
-        
-        
         {/* Basic form */}
         <TextField style={styles.a } id="name" label="이름" variant="outlined" onChange={(e) => setName(e.target.value)} />
         <TextField style={styles.a} id="mobil" label="핸드폰 번호" variant="outlined" onChange={(e) => setMobile(e.target.value)}/>
@@ -130,15 +141,17 @@ export default function BasicTextFields() {
         {/* Basic form */}
 
         {/* Experience of online Ads - Radio box*/}
-        <FormControl styles={styles.radioButtonForm}>
-          <FormLabel id="demo-row-radio-buttons-group-label">나는 온라인 광고를 해본 경험이 ..</FormLabel>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label" styles={styles.radioButtonForm}>나는 온라인 광고를 해본 경험이 ..
+          </FormLabel>
           <RadioGroup
             row
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
+            style={{paddingLeft: '14rem'}}
           >
             <FormControlLabel value="yes" control={<Radio />} label="있다" checked={isExperienced === 'yes'} onChange={handleAnswerChange}/>
-            <FormControlLabel value="no" control={ <Radio /> } label="없다" checked={isExperienced === 'no'} onChange={handleAnswerChange}/>   
+            <FormControlLabel value="no" control={ <Radio /> } label="없다" checked={ isExperienced === 'no' } onChange={ handleAnswerChange } />   
           </RadioGroup>
         </FormControl>
 
@@ -147,22 +160,21 @@ export default function BasicTextFields() {
         {/* Experience of online Ads - Radio box*/}
         
         {/* Agreement */}
-          <SimpleAccordion />
+          <SimpleAccordion/>
         {/* Agreement */ }
         
         {/* Agreement - Check Box*/ }
-        <FormGroup onSubmit={submit}>
-          <FormControlLabel control={<Checkbox defaultChecked />} label="
+        <FormGroup onSubmit={submit} >
+          <FormControlLabel control={<Checkbox defaultChecked style={styles.checkBox}/>} label="
               개인정보 수집 동의서를 읽었으며 동의 합니다."
               checked={ isAgreed }
               onChange={ handleIsAgreedChange } 
           />
 
           <Button 
-              
               onClick={ submit }
               variant="contained"
-              style={ { width: '15rem', marginTop: '5rem' } }>
+              style={ styles.submitButton }>
             제출
           </Button>
           

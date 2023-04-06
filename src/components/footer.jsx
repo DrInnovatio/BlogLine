@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
   main: {
-    width: '60rem',
+    width: '100%',
     height: '10rem',
     background: 'gray',    
     marginTop: '8rem'

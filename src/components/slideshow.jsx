@@ -12,26 +12,18 @@ import pic_9 from '../images/009.jpg'
 import pic_10 from '../images/010.jpg'
 import 'react-slideshow-image/dist/styles.css';
 
-
-const spanStyle = {
-  padding: '20px',
-  background: '#efefef',
-  color: '#000000'
-}
-
 const divStyle = {
-  width: '35rem',
+  width: '100%',
   height: '35rem',
   display: 'flex',
   flex:1,
   justifContent: 'center',
   alignItems: 'center',
   overflow: 'hidden',
-  objectFit: 'contain',
+  objectFit: 'cover',
   position: 'relative',
   
 }
-
 
 const slideImages = [
   {
@@ -81,12 +73,11 @@ const slideImages = [
 
 function Slideshow() {
   return (
-    <div className="slide-container" style={{width: '50rem'}}>
+    <div className="slide-container" style={{width: '100%'}}>
         <Slide>
          {slideImages.map((slideImage, index)=> (
             <div key={index}>
              <div style={ {...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                <span style={spanStyle}>{slideImage.caption}</span>
               </div>
             </div>
           ))} 

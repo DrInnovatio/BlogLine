@@ -8,14 +8,18 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const styles = {
   main: {
-    textAlign: 'left'
+    textAlign: 'left',
+  },
+  outside: {
+    width: '48rem',
+    paddingLeft: '2rem' 
   }
 }
 
 export default function SimpleAccordion() {
 
   return (
-    <div style={ { width: '55rem' } }>
+    <div style={styles.outside}>
       <Accordion>
         <AccordionSummary
           expandIcon={ <ExpandMoreIcon /> }
