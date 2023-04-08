@@ -22,7 +22,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between', //space-around
     marginTop: '2rem',
-    marginLeft:  '1rem',
+    marginLeft:  '10rem',
     paddingTop: '2rem',
     borderRadius: '25px',
     boxShadow: 'inset 13px 13px 26px #d0d0d0, inset -13px -13px 26px #f0f0f0'
@@ -37,7 +37,8 @@ const styles = {
   submitButton: {
     width: '15rem',
     marginTop: '3rem',
-    marginLeft: '20rem' 
+    marginLeft: '18rem',
+    backgroundColor: '#524847'
   },
   checkBox: {
     marginLeft: '16rem' 
@@ -122,7 +123,7 @@ export default function BasicTextFields() {
         style={styles.inputs}
       >
         {/* Basic form */}
-        <TextField style={styles.a } id="name" label="이름" variant="outlined" onChange={(e) => setName(e.target.value)} />
+        <TextField style={styles.a } id="name" label="대표님 성함" variant="outlined" onChange={(e) => setName(e.target.value)} />
         <TextField style={styles.a} id="mobil" label="핸드폰 번호" variant="outlined" onChange={(e) => setMobile(e.target.value)}/>
         <TextField style={styles.a} id="email" label="이메일" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
         <TextField style={styles.a} id="restaurantName" label="매장 상호명" variant="outlined" onChange={(e) => setRestaurantName(e.target.value)}/>
@@ -180,9 +181,7 @@ export default function BasicTextFields() {
           
         </FormGroup>
         {/* Agreement - Check Box*/ }
-        
 
-      
       </Box>
       </form>
     

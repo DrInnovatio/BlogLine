@@ -5,11 +5,9 @@ import Slideshow from './components/slideshow';
 import BasicTextFields from '../src/components/form';
 import Footer from './components/footer';
 import KmongImages from './components/kmong';
+import BasicCard from './components/card';
 import 'react-slideshow-image/dist/styles.css'
 import './App.css'; 
-
-
-// import slide_1 from '../src/images/slide_1.jpg'
 
 
 const styles = {
@@ -18,10 +16,7 @@ const styles = {
     height: 'auto',
     alignText: 'center',
     margin: '2rem auto',
-    backgroundColor:'green'
   },
-  // inputs: {
-
   inputText: {
       padding: "1rem"
   },
@@ -50,8 +45,10 @@ function App() {
           maxWidth="md"
         >
 
-            <BasicTextFields />
-          
+        <BasicCard/>
+
+        <BasicTextFields />
+        
         </Box>
     
    
